@@ -1,0 +1,107 @@
+@use 'variables' as *;
+
+:root {
+  --ink: #{$ink};
+  --muted: #{$muted};
+  --paper: #{$paper};
+  --surface: #{$surface};
+  --line: #{$line};
+  --brand: #{$brand};
+  --brand-dark: #{$brand-dark};
+  --accent: #{$accent};
+  --tint: #{$tint};
+  // Sovrascrive i colori di Bootstrap con quelli del sito
+  --bs-body-font-family: #{$font-body};
+  --bs-body-color: #{$ink};
+  --bs-body-bg: #{$paper};
+  --bs-link-color: #{$brand};
+  --bs-link-hover-color: #{$brand-dark};
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem; // spazio per il menu sticky quando si salta a un'ancora
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.4rem);
+  font-weight: 800;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.4vw, 2.1rem);
+  font-weight: 750;
+}
+
+a {
+  text-underline-offset: 3px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--ink);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: $radius-sm;
+  z-index: 2000;
+
+  &:focus {
+    top: 0.75rem;
+    color: #fff;
+  }
+}
+
+.section {
+  padding: 3.5rem 0;
+
+  @include up($bp-md) {
+    padding: 5rem 0;
+  }
+
+  &--tint {
+    background: var(--tint);
+  }
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand);
+  margin-bottom: 0.75rem;
+}
+
+.lead-text {
+  color: var(--muted);
+  font-size: 1.15rem;
+  max-width: 62ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

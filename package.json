@@ -1,0 +1,22 @@
+{
+  "name": "portfolio-andrea-viani",
+  "version": "1.0.0",
+  "description": "Sito personale di Andrea Viani: solo HTML e CSS (Sass + Bootstrap).",
+  "private": true,
+  "scripts": {
+    "sass": "sass --no-source-map --style=expanded scss/main.scss css/style.css",
+    "sass:watch": "sass --watch scss/main.scss css/style.css",
+    "build": "npm run sass && npm run vendor",
+    "vendor": "node scripts/copy-vendor.mjs",
+    "validate": "html-validate *.html",
+    "check": "node scripts/check-links.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "author": "Andrea Viani",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^5.3.8",
+    "html-validate": "^11.16.2",
+    "sass": "^1.105.1"
+  }
+}

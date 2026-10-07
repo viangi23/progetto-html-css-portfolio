@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 440" role="img" aria-label="Finestra di editor con codice HTML e CSS">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef1fd"/>
+      <stop offset="1" stop-color="#dfe5fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="440" rx="28" fill="url(#bg)"/>
+  <circle cx="400" cy="70" r="46" fill="#f2a541" opacity=".9"/>
+  <circle cx="70" cy="380" r="64" fill="#2d4fd6" opacity=".12"/>
+
+  <g transform="translate(46 70)">
+    <rect width="330" height="260" rx="14" fill="#1b2236"/>
+    <rect width="330" height="36" rx="14" fill="#2a3350"/>
+    <rect y="22" width="330" height="14" fill="#2a3350"/>
+    <circle cx="22" cy="18" r="6" fill="#ff6b6b"/>
+    <circle cx="42" cy="18" r="6" fill="#f2a541"/>
+    <circle cx="62" cy="18" r="6" fill="#4cd4a0"/>
+    <g font-family="Consolas, 'Courier New', monospace" font-size="15">
+      <text x="22" y="68" fill="#8fa3ff">&lt;section class="hero"&gt;</text>
+      <text x="40" y="92" fill="#cfd5e6">&lt;h1&gt;Ciao, sono Andrea&lt;/h1&gt;</text>
+      <text x="22" y="116" fill="#8fa3ff">&lt;/section&gt;</text>
+      <text x="22" y="150" fill="#f2a541">.hero {</text>
+      <text x="40" y="174" fill="#cfd5e6">display: <tspan fill="#4cd4a0">grid</tspan>;</text>
+      <text x="40" y="198" fill="#cfd5e6">gap: <tspan fill="#4cd4a0">2.5rem</tspan>;</text>
+      <text x="22" y="222" fill="#f2a541">}</text>
+    </g>
+  </g>
+
+  <g transform="translate(262 250)">
+    <rect width="168" height="128" rx="14" fill="#fff" stroke="#e6e2d8" stroke-width="2"/>
+    <rect x="16" y="16" width="64" height="10" rx="5" fill="#2d4fd6"/>
+    <rect x="16" y="38" width="136" height="8" rx="4" fill="#cfd5e6"/>
+    <rect x="16" y="54" width="110" height="8" rx="4" fill="#cfd5e6"/>
+    <rect x="16" y="82" width="64" height="28" rx="14" fill="#2d4fd6"/>
+  </g>
+</svg>

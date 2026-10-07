@@ -1,0 +1,324 @@
+@use 'variables' as *;
+
+// Pulsanti: partono dalle classi .btn di Bootstrap e le ritoccano
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #{$brand};
+  --bs-btn-border-color: #{$brand};
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$brand-dark};
+  --bs-btn-hover-border-color: #{$brand-dark};
+  --bs-btn-active-bg: #{$brand-dark};
+  --bs-btn-active-border-color: #{$brand-dark};
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+}
+
+.btn-outline-brand {
+  --bs-btn-color: #{$brand};
+  --bs-btn-border-color: #{$brand};
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #{$brand};
+  --bs-btn-hover-border-color: #{$brand};
+  border-radius: 999px;
+  padding: 0.65rem 1.4rem;
+  font-weight: 600;
+}
+
+// Card dei progetti
+.project-card {
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: $radius;
+  box-shadow: $shadow;
+  display: flex; // Flexbox: la riga dei link resta sempre in fondo alla card
+  flex-direction: column;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(27, 34, 54, 0.12);
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    margin: 0.25rem 0 0.5rem;
+  }
+
+  p {
+    color: var(--muted);
+    margin-bottom: 1rem;
+  }
+
+  &__tag {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+
+  &__links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1.1rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+
+    &:hover {
+      transform: none;
+    }
+  }
+}
+
+// Etichette per le tecnologie
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.chip {
+  background: var(--tint);
+  color: var(--brand-dark);
+  border-radius: 999px;
+  padding: 0.2rem 0.7rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+// Skill con barra di livello (solo CSS)
+.skill-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+
+  @include up($bp-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include up($bp-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.skill-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: $radius;
+  padding: 1.4rem;
+
+  h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li + li {
+    margin-top: 0.7rem;
+  }
+
+  .level {
+    display: block;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--line);
+    margin-top: 0.25rem;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      height: 100%;
+      width: var(--w, 50%);
+      background: linear-gradient(90deg, var(--brand), var(--accent));
+      border-radius: inherit;
+    }
+  }
+}
+
+// Linea del tempo del CV
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.4rem;
+  border-left: 3px solid var(--line);
+
+  > li {
+    position: relative;
+    padding-bottom: 1.6rem;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: calc(-1.4rem - 8px);
+      top: 0.4rem;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--brand);
+      border: 3px solid var(--paper);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.15rem;
+    }
+  }
+
+  &__when {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--brand);
+  }
+}
+
+// CV
+.cv {
+  display: grid;
+  gap: 2.5rem;
+
+  @include up($bp-lg) {
+    grid-template-columns: 300px 1fr;
+  }
+
+  &__side {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: $radius;
+    padding: 1.6rem;
+    align-self: start;
+
+    h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--brand);
+      margin: 1.4rem 0 0.6rem;
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+
+    ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  &__main h2 {
+    font-size: 1.4rem;
+    margin: 0 0 1.2rem;
+  }
+
+  &__main section + section {
+    margin-top: 2.5rem;
+  }
+
+  &__avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+  }
+}
+
+// Form di contatto (campi Bootstrap, stile proprio)
+.contact {
+  display: grid;
+  gap: 2.5rem;
+
+  @include up($bp-lg) {
+    grid-template-columns: 1fr 1.3fr;
+  }
+
+  &__aside {
+    background: var(--tint);
+    border-radius: $radius;
+    padding: 1.6rem;
+    align-self: start;
+
+    ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: $radius;
+    padding: 1.8rem;
+    box-shadow: $shadow;
+  }
+
+  .form-label {
+    font-weight: 600;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: $radius-sm;
+    border-color: #cfd3dd;
+    padding: 0.7rem 0.9rem;
+
+    &:focus {
+      border-color: var(--brand);
+      box-shadow: 0 0 0 0.2rem rgba(45, 79, 214, 0.2);
+    }
+  }
+
+  .req {
+    color: #b3261e;
+  }
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+// Versione stampabile del CV: solo contenuto, senza menu e footer
+@media print {
+  .site-nav,
+  .site-footer,
+  .skip-link,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .cv {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .cv__side,
+  .skill-box {
+    box-shadow: none;
+  }
+}
+
+.about-avatar {
+  max-width: 200px;
+}

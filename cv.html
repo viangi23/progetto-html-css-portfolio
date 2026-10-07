@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Andrea Viani</title>
+  <meta name="description" content="Curriculum di Andrea Viani: formazione, competenze tecniche e progetti. Pagina stampabile.">
+  <meta name="author" content="Andrea Viani">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://viangi23.github.io/progetto-html-css-portfolio/cv.html">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Viani">
+  <meta property="og:title" content="CV · Andrea Viani">
+  <meta property="og:description" content="Formazione, competenze e progetti di Andrea Viani, sviluppatore web in formazione.">
+  <meta property="og:url" content="https://viangi23.github.io/progetto-html-css-portfolio/cv.html">
+  <meta property="og:image" content="https://viangi23.github.io/progetto-html-css-portfolio/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-nav sticky-top">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Andrea Viani, home">
+        <img src="img/favicon.svg" alt="" width="34" height="34">
+        Andrea Viani
+      </a>
+      <nav aria-label="Menu principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="cv.html" aria-current="page">CV</a></li>
+          <li><a href="contattami.html">Contattami</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <div class="container page-head">
+      <span class="eyebrow">Curriculum</span>
+      <h1>Andrea Viani</h1>
+      <p class="lead-text">Sviluppatore web in formazione: front end, back end e DevOps, con un background di analisi dei dati.</p>
+      <p class="no-print note">Per ottenere un PDF usa «Stampa» del browser: la pagina ha uno stile dedicato alla stampa.</p>
+    </div>
+
+    <div class="container pb-5">
+      <div class="cv">
+        <aside class="cv__side" aria-label="Riepilogo">
+          <img class="cv__avatar" src="img/avatar.svg" alt="Avatar con le iniziali di Andrea Viani" width="120" height="120">
+
+          <h2>Contatti</h2>
+          <ul class="list-unstyled ps-0">
+            <li><a href="contattami.html">Modulo di contatto</a></li>
+            <li><a href="https://github.com/viangi23" target="_blank" rel="noopener">github.com/viangi23</a></li>
+          </ul>
+
+          <h2>Competenze</h2>
+          <ul>
+            <li>HTML, CSS, Sass, Bootstrap</li>
+            <li>JavaScript ES6+, React</li>
+            <li>Node.js, Express, MongoDB</li>
+            <li>Docker, GitHub Actions</li>
+            <li>Test: Vitest, Testing Library</li>
+            <li>Python, NumPy, pandas, SQL</li>
+            <li>Excel, Tableau, Data Studio</li>
+          </ul>
+
+          <h2>Lingue</h2>
+          <ul>
+            <li>Italiano</li>
+          </ul>
+        </aside>
+
+        <div class="cv__main">
+          <section aria-labelledby="cv-profilo">
+            <h2 id="cv-profilo">Profilo</h2>
+            <p>
+              Mi sono avvicinato allo sviluppo partendo dai dati e ho scelto di approfondirlo con un percorso strutturato.
+              Scrivo codice leggibile, lo accompagno con test e documentazione e lo porto online con una pipeline automatica.
+              Cerco un ruolo da sviluppatore web junior (front end o full stack).
+            </p>
+          </section>
+
+          <section aria-labelledby="cv-formazione">
+            <h2 id="cv-formazione">Formazione</h2>
+            <ol class="timeline">
+              <li>
+                <span class="timeline__when">2026 · in corso</span>
+                <h3>Master start2impact × Unimarconi</h3>
+                <p class="mb-0">Percorso di sviluppo web e analisi dati: HTML e CSS, JavaScript, JavaScript Advanced, React, Node.js, DevOps, Python, SQL, Machine Learning e Advanced Analytics. Ogni corso si conclude con un progetto valutato da un professionista.</p>
+              </li>
+            </ol>
+          </section>
+
+          <section aria-labelledby="cv-progetti">
+            <h2 id="cv-progetti">Progetti principali</h2>
+            <ol class="timeline">
+              <li>
+                <span class="timeline__when">React</span>
+                <h3>Calma · sito per la meditazione</h3>
+                <p class="mb-0">Timer con ora di fine calcolata (preciso a scheda in background), React Router, hook personalizzati, Context + useReducer. 63 test.</p>
+              </li>
+              <li>
+                <span class="timeline__when">Node.js</span>
+                <h3>MeditActive API</h3>
+                <p class="mb-0">API REST con Express, MongoDB e Zod; filtri per obiettivi e date; protezione da NoSQL injection. 109 test.</p>
+              </li>
+              <li>
+                <span class="timeline__when">DevOps</span>
+                <h3>Calma in produzione</h3>
+                <p class="mb-0">Docker multi-stage, CI/CD su GitHub Actions, deploy su GitHub Pages, Sentry e uptime monitoring.</p>
+              </li>
+              <li>
+                <span class="timeline__when">JavaScript avanzato</span>
+                <h3>Lettore di Hacker News</h3>
+                <p class="mb-0">Pattern Repository e Observer, paginazione e ricerca. 51 test.</p>
+              </li>
+            </ol>
+            <p class="mb-0">Codice e link: pagina <a href="progetti.html">Progetti</a>.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© 2026 Andrea Viani · Sito realizzato con HTML, CSS (Sass) e Bootstrap.</p>
+      <ul>
+        <li><a href="https://github.com/viangi23" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

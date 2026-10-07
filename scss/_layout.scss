@@ -1,0 +1,147 @@
+@use 'variables' as *;
+
+// ---------- Menu sticky ----------
+// Resta fissato in alto durante lo scroll su tutte le dimensioni (sticky-top di Bootstrap + stile proprio).
+.site-nav {
+  background: rgba(251, 249, 244, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  padding: 0.55rem 0;
+
+  .container {
+    display: flex; // Flexbox: logo a sinistra, link a destra, vanno a capo su schermi stretti
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  color: var(--ink);
+  text-decoration: none;
+
+  img {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover {
+    color: var(--brand);
+  }
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+
+    &:hover {
+      background: var(--tint);
+      color: var(--brand-dark);
+    }
+
+    &[aria-current='page'] {
+      background: var(--brand);
+      color: #fff;
+    }
+  }
+
+  @media (max-width: ($bp-sm - 1px)) {
+    width: 100%;
+    justify-content: space-between;
+
+    a {
+      padding: 0.4rem 0.55rem;
+      font-size: 0.88rem;
+    }
+  }
+}
+
+// ---------- Footer ----------
+.site-footer {
+  background: $ink;
+  color: #cfd5e6;
+  padding: 2.5rem 0;
+
+  a {
+    color: #fff;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+  }
+
+  ul {
+    display: flex;
+    gap: 1.25rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// ---------- Hero (Grid) ----------
+.hero {
+  padding: 3rem 0 3.5rem;
+
+  &__grid {
+    display: grid; // CSS Grid: una colonna su mobile, testo + immagine da 900px
+    gap: 2.5rem;
+    align-items: center;
+
+    @media (min-width: 900px) {
+      grid-template-columns: 1.4fr 1fr;
+    }
+  }
+
+  &__title span {
+    color: var(--brand);
+  }
+
+  &__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+  }
+
+  &__art {
+    justify-self: center;
+    width: min(100%, 360px);
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 28px;
+      box-shadow: $shadow;
+    }
+  }
+}
+
+.page-head {
+  padding: 3rem 0 1.5rem;
+
+  p {
+    max-width: 62ch;
+  }
+}

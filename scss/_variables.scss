@@ -1,0 +1,28 @@
+// Palette e misure del sito. Tutto il tema passa da qui (e dalle custom properties in :root).
+$ink: #1b2236;
+$muted: #5b6477;
+$paper: #fbf9f4;
+$surface: #ffffff;
+$line: #e6e2d8;
+$brand: #2d4fd6;
+$brand-dark: #1f379b;
+$accent: #f2a541;
+$tint: #eef1fd;
+
+$radius: 14px;
+$radius-sm: 8px;
+$shadow: 0 10px 30px rgba(27, 34, 54, 0.08);
+
+$font-body: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+$font-mono: ui-monospace, 'Cascadia Code', Consolas, 'Courier New', monospace;
+
+// Breakpoint (stessa logica mobile-first di Bootstrap)
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+
+@mixin up($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

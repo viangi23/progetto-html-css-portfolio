@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contattami · Andrea Viani</title>
+  <meta name="description" content="Scrivi ad Andrea Viani: modulo di contatto per proposte di lavoro, collaborazioni e domande.">
+  <meta name="author" content="Andrea Viani">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://viangi23.github.io/progetto-html-css-portfolio/contattami.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Viani">
+  <meta property="og:title" content="Contattami · Andrea Viani">
+  <meta property="og:description" content="Hai una proposta o una domanda? Scrivimi dal modulo di contatto.">
+  <meta property="og:url" content="https://viangi23.github.io/progetto-html-css-portfolio/contattami.html">
+  <meta property="og:image" content="https://viangi23.github.io/progetto-html-css-portfolio/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-nav sticky-top">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Andrea Viani, home">
+        <img src="img/favicon.svg" alt="" width="34" height="34">
+        Andrea Viani
+      </a>
+      <nav aria-label="Menu principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contattami.html" aria-current="page">Contattami</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <div class="container page-head">
+      <span class="eyebrow">Contatti</span>
+      <h1>Scrivimi</h1>
+      <p class="lead-text">Compila il modulo: il messaggio mi arriva per email. Non pubblico qui il mio indirizzo per evitare lo spam dei bot.</p>
+    </div>
+
+    <section class="section pt-0" aria-label="Modulo di contatto">
+      <div class="container">
+        <div class="contact">
+          <aside class="contact__aside">
+            <h2 class="h5">Di cosa possiamo parlare</h2>
+            <ul>
+              <li>Opportunità da sviluppatore web junior</li>
+              <li>Collaborazioni e piccoli progetti</li>
+              <li>Domande sul codice dei miei progetti</li>
+            </ul>
+            <p class="note mt-3 mb-0">Rispondo di solito entro un paio di giorni. Puoi anche trovarmi su <a href="https://github.com/viangi23" target="_blank" rel="noopener">GitHub</a>.</p>
+          </aside>
+
+          <!--
+            Il modulo usa un servizio esterno di invio email (FormSubmit): sostituisci CODICE-FORMSUBMIT con il codice
+            che ricevi attivando il servizio con la tua email (vedi README). L'indirizzo email non compare mai nella pagina.
+          -->
+          <form class="contact__form" action="https://formsubmit.co/CODICE-FORMSUBMIT" method="post" novalidate>
+            <div class="mb-3">
+              <label class="form-label" for="nome">Nome <span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control" type="text" id="nome" name="nome" autocomplete="name" required minlength="2" maxlength="80">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control" type="email" id="email" name="email" autocomplete="email" required maxlength="120" placeholder="nome@esempio.it">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="motivo">Motivo del contatto</label>
+              <select class="form-select" id="motivo" name="motivo">
+                <option value="lavoro">Proposta di lavoro</option>
+                <option value="collaborazione">Collaborazione</option>
+                <option value="domanda">Domanda sui progetti</option>
+                <option value="altro">Altro</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="messaggio">Messaggio <span class="req" aria-hidden="true">*</span></label>
+              <textarea class="form-control" id="messaggio" name="messaggio" rows="6" required minlength="10" maxlength="2000"></textarea>
+            </div>
+
+            <div class="form-check mb-4">
+              <input class="form-check-input" type="checkbox" id="privacy" name="privacy" required>
+              <label class="form-check-label" for="privacy">Acconsento a essere ricontattato all'indirizzo indicato <span class="req" aria-hidden="true">*</span></label>
+            </div>
+
+            <!-- Campo trappola per i bot: gli utenti non lo vedono, i bot lo compilano e il messaggio viene scartato -->
+            <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="Nuovo messaggio dal sito di Andrea Viani">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="https://viangi23.github.io/progetto-html-css-portfolio/grazie.html">
+
+            <button class="btn btn-brand" type="submit">Invia il messaggio</button>
+            <p class="note mt-3 mb-0"><span class="req">*</span> campi obbligatori</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© 2026 Andrea Viani · Sito realizzato con HTML, CSS (Sass) e Bootstrap.</p>
+      <ul>
+        <li><a href="https://github.com/viangi23" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progetti · Andrea Viani</title>
+  <meta name="description" content="I progetti di Andrea Viani: JavaScript, React, Node.js, DevOps e analisi dati, con codice su GitHub.">
+  <meta name="author" content="Andrea Viani">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://viangi23.github.io/progetto-html-css-portfolio/progetti.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Viani">
+  <meta property="og:title" content="Progetti · Andrea Viani">
+  <meta property="og:description" content="JavaScript, React, Node.js, DevOps e dati: i miei progetti con codice su GitHub.">
+  <meta property="og:url" content="https://viangi23.github.io/progetto-html-css-portfolio/progetti.html">
+  <meta property="og:image" content="https://viangi23.github.io/progetto-html-css-portfolio/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-nav sticky-top">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Andrea Viani, home">
+        <img src="img/favicon.svg" alt="" width="34" height="34">
+        Andrea Viani
+      </a>
+      <nav aria-label="Menu principale">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="progetti.html" aria-current="page">Progetti</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contattami.html">Contattami</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <div class="container page-head">
+      <span class="eyebrow">Portfolio</span>
+      <h1>Progetti</h1>
+      <p class="lead-text">Ogni progetto nasce da un corso del Master e arriva fino alla consegna: codice, test, documentazione e, dove serve, deploy online.</p>
+    </div>
+
+    <section class="section pt-0" aria-label="Elenco dei progetti">
+      <div class="container">
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">JavaScript</span>
+              <h3>Contatore interattivo</h3>
+              <p>La mia prima applicazione in JavaScript puro: stato separato dall'interfaccia, tastiera, salvataggio nel browser e test con il runner di Node.</p>
+              <ul class="chips"><li class="chip">JavaScript</li><li class="chip">DOM</li><li class="chip">8 test</li></ul>
+              <div class="project-card__links">
+                <a href="https://viangi23.github.io/progetto-javascript-counter/" target="_blank" rel="noopener">Sito online</a>
+                <a href="https://github.com/viangi23/progetto-javascript-counter" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">JavaScript avanzato</span>
+              <h3>Lettore di Hacker News</h3>
+              <p>Client per l'API di Hacker News con pattern Repository e Observer, paginazione, ricerca e gestione degli elementi eliminati. 51 test.</p>
+              <ul class="chips"><li class="chip">Vite</li><li class="chip">Axios</li><li class="chip">Vitest</li></ul>
+              <div class="project-card__links">
+                <a href="https://viangi23.github.io/progetto-javascript-advanced-hacker-news/" target="_blank" rel="noopener">Sito online</a>
+                <a href="https://github.com/viangi23/progetto-javascript-advanced-hacker-news" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">React</span>
+              <h3>Calma · meditazione</h3>
+              <p>Sito per la meditazione con timer preciso anche a scheda in background, guida, suoni generati con Web Audio e diario delle sessioni. 63 test.</p>
+              <ul class="chips"><li class="chip">React 19</li><li class="chip">Router</li><li class="chip">Context API</li></ul>
+              <div class="project-card__links">
+                <a href="https://viangi23.github.io/progetto-react-meditazione/" target="_blank" rel="noopener">Sito online</a>
+                <a href="https://github.com/viangi23/progetto-react-meditazione" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">Node.js</span>
+              <h3>MeditActive API</h3>
+              <p>API REST per utenti, obiettivi e intervalli con filtri per obiettivi e date, validazione con Zod, status code corretti e difese contro la NoSQL injection. 109 test.</p>
+              <ul class="chips"><li class="chip">Express</li><li class="chip">MongoDB</li><li class="chip">Zod</li></ul>
+              <div class="project-card__links">
+                <a href="https://github.com/viangi23/progetto-nodejs-meditactive-api" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">DevOps</span>
+              <h3>Calma in produzione</h3>
+              <p>Container Docker multi-stage con nginx, pipeline CI/CD su GitHub Actions, gestione dei secrets, error tracking con Sentry e uptime monitoring.</p>
+              <ul class="chips"><li class="chip">Docker</li><li class="chip">GitHub Actions</li><li class="chip">Sentry</li></ul>
+              <div class="project-card__links">
+                <a href="https://github.com/viangi23/progetto-devops-calma" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">Dati</span>
+              <h3>Analisi e machine learning</h3>
+              <p>Progetti con Excel, SQL, Python e NumPy e un notebook di Advanced Analytics con modelli di classificazione confrontati su un test set.</p>
+              <ul class="chips"><li class="chip">Python</li><li class="chip">SQL</li><li class="chip">scikit-learn</li></ul>
+              <div class="project-card__links">
+                <a href="contattami.html">Chiedimi i dettagli</a>
+              </div>
+            </article>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© 2026 Andrea Viani · Sito realizzato con HTML, CSS (Sass) e Bootstrap.</p>
+      <ul>
+        <li><a href="https://github.com/viangi23" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

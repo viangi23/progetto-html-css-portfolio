@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Andrea Viani · Sviluppatore web in formazione</title>
+  <meta name="description" content="Sito personale di Andrea Viani: sviluppo web con HTML, CSS, JavaScript, React e Node.js, più analisi dati con Python e SQL. Progetti, CV e contatti.">
+  <meta name="author" content="Andrea Viani">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://viangi23.github.io/progetto-html-css-portfolio/">
+
+  <!-- Open Graph: anteprima quando il link viene condiviso sui social -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Andrea Viani">
+  <meta property="og:title" content="Andrea Viani · Sviluppatore web in formazione">
+  <meta property="og:description" content="Progetti, competenze e CV di Andrea Viani: HTML, CSS, JavaScript, React, Node.js e dati.">
+  <meta property="og:url" content="https://viangi23.github.io/progetto-html-css-portfolio/">
+  <meta property="og:image" content="https://viangi23.github.io/progetto-html-css-portfolio/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Andrea Viani, sviluppatore web in formazione">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+  <header class="site-nav sticky-top">
+    <div class="container">
+      <a class="brand" href="index.html" aria-label="Andrea Viani, home">
+        <img src="img/favicon.svg" alt="" width="34" height="34">
+        Andrea Viani
+      </a>
+      <nav aria-label="Menu principale">
+        <ul class="nav-links">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="progetti.html">Progetti</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="contattami.html">Contattami</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="container">
+        <div class="hero__grid">
+          <div>
+            <span class="eyebrow">Sviluppatore web in formazione</span>
+            <h1 class="hero__title">Ciao, sono <span>Andrea</span>. Costruisco siti e applicazioni web.</h1>
+            <p class="lead-text mt-3">
+              Partendo dall'analisi dei dati sono arrivato allo sviluppo: oggi scrivo interfacce con HTML, CSS, JavaScript e React,
+              API con Node.js e le porto online con Docker e pipeline automatiche. Mi piace il codice chiaro, testato e che si capisce.
+            </p>
+            <div class="hero__cta">
+              <a class="btn btn-brand" href="progetti.html">Guarda i progetti</a>
+              <a class="btn btn-outline-brand" href="contattami.html">Scrivimi</a>
+            </div>
+          </div>
+          <div class="hero__art">
+            <img src="img/hero.svg" alt="Illustrazione di una finestra di editor con codice HTML e CSS" width="480" height="440">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="chi-sono" aria-labelledby="chi-sono-titolo">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-md-4 col-lg-3 text-center">
+            <img src="img/avatar.svg" alt="Avatar con le iniziali di Andrea Viani" width="200" height="200" class="img-fluid rounded-circle about-avatar">
+          </div>
+          <div class="col-md-8 col-lg-9">
+            <span class="eyebrow">Chi sono</span>
+            <h2 id="chi-sono-titolo">Mi piace capire come funzionano le cose, poi costruirle</h2>
+            <p>
+              Sto completando il Master start2impact × Unimarconi, un percorso che mi ha portato da Excel, SQL e Python fino allo sviluppo
+              web completo: front end, back end e DevOps. Ogni corso si è chiuso con un progetto reale, pubblicato con README, test e documentazione.
+            </p>
+            <p class="mb-0">
+              Cerco un ruolo da <strong>sviluppatore web junior</strong> (front end o full stack) in un team dove imparare dai colleghi e dare contributi concreti
+              fin dai primi giorni. Qui sotto trovi le competenze principali; nella pagina <a href="progetti.html">Progetti</a> il codice che le dimostra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competenze" aria-labelledby="competenze-titolo">
+      <div class="container">
+        <span class="eyebrow">Competenze</span>
+        <h2 id="competenze-titolo" class="mb-4">Cosa so fare</h2>
+        <div class="skill-grid">
+          <div class="skill-box">
+            <h3>Front end</h3>
+            <ul>
+              <li>HTML semantico e accessibile<span class="level" style="--w: 90%"></span></li>
+              <li>CSS, Flexbox, Grid, Sass<span class="level" style="--w: 85%"></span></li>
+              <li>JavaScript (ES6+)<span class="level" style="--w: 80%"></span></li>
+              <li>React, Router, Hooks<span class="level" style="--w: 75%"></span></li>
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h3>Back end e DevOps</h3>
+            <ul>
+              <li>Node.js, Express, API REST<span class="level" style="--w: 75%"></span></li>
+              <li>MongoDB, validazione con Zod<span class="level" style="--w: 70%"></span></li>
+              <li>Docker, GitHub Actions<span class="level" style="--w: 65%"></span></li>
+              <li>Test (Vitest, Testing Library)<span class="level" style="--w: 75%"></span></li>
+            </ul>
+          </div>
+          <div class="skill-box">
+            <h3>Dati</h3>
+            <ul>
+              <li>Python, NumPy, pandas<span class="level" style="--w: 75%"></span></li>
+              <li>SQL<span class="level" style="--w: 75%"></span></li>
+              <li>Excel, Tableau, Data Studio<span class="level" style="--w: 70%"></span></li>
+              <li>Machine Learning di base<span class="level" style="--w: 60%"></span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="note mt-3 mb-0">Le barre indicano la mia autovalutazione, non una certificazione.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" aria-labelledby="in-evidenza-titolo">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
+          <div>
+            <span class="eyebrow">Progetti</span>
+            <h2 id="in-evidenza-titolo" class="mb-0">In evidenza</h2>
+          </div>
+          <a href="progetti.html">Vedi tutti i progetti →</a>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">React</span>
+              <h3>Calma · sito per la meditazione</h3>
+              <p>Timer programmabile, guida alle tecniche, suoni e diario. Router, hook personalizzati, Context API e 63 test.</p>
+              <div class="project-card__links">
+                <a href="https://viangi23.github.io/progetto-react-meditazione/" target="_blank" rel="noopener">Sito online</a>
+                <a href="https://github.com/viangi23/progetto-react-meditazione" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">Node.js · MongoDB</span>
+              <h3>MeditActive API</h3>
+              <p>API REST con Express e MongoDB: utenti, obiettivi e intervalli con filtri, validazione e protezione da NoSQL injection. 109 test.</p>
+              <div class="project-card__links">
+                <a href="https://github.com/viangi23/progetto-nodejs-meditactive-api" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="project-card">
+              <span class="project-card__tag">DevOps</span>
+              <h3>Calma in produzione</h3>
+              <p>Docker multi-stage, pipeline CI/CD su GitHub Actions, deploy su GitHub Pages, error tracking e uptime monitoring.</p>
+              <div class="project-card__links">
+                <a href="https://github.com/viangi23/progetto-devops-calma" target="_blank" rel="noopener">Codice</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="cta-titolo">
+      <div class="container text-center">
+        <h2 id="cta-titolo">Lavoriamo insieme?</h2>
+        <p class="lead-text mx-auto">Se hai un'opportunità, un progetto o vuoi solo scambiare due parole sul codice, scrivimi: ti rispondo volentieri.</p>
+        <a class="btn btn-brand mt-2" href="contattami.html">Vai al modulo di contatto</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-0">© 2026 Andrea Viani · Sito realizzato con HTML, CSS (Sass) e Bootstrap.</p>
+      <ul>
+        <li><a href="https://github.com/viangi23" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contattami.html">Contatti</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
