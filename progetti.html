@@ -32,7 +32,10 @@
         <img src="img/favicon.svg" alt="" width="34" height="34">
         Andrea Viani
       </a>
-      <nav aria-label="Menu principale">
+      <!-- Menu mobile solo CSS: la checkbox (nascosta ma raggiungibile da tastiera) apre e chiude i link -->
+      <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-controls="menu-principale">
+      <label class="nav-toggle__btn" for="menu-toggle"><span class="visually-hidden">Apri o chiudi il menu</span><span class="nav-toggle__bars" aria-hidden="true"></span></label>
+      <nav aria-label="Menu principale" id="menu-principale">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="progetti.html" aria-current="page">Progetti</a></li>
@@ -58,8 +61,8 @@
             <article class="project-card">
               <span class="project-card__tag">JavaScript</span>
               <h3>Contatore interattivo</h3>
-              <p>La mia prima applicazione in JavaScript puro: stato separato dall'interfaccia, tastiera, salvataggio nel browser e test con il runner di Node.</p>
-              <ul class="chips"><li class="chip">JavaScript</li><li class="chip">DOM</li><li class="chip">8 test</li></ul>
+              <p>La mia prima applicazione in JavaScript puro: interfaccia creata dal DOM, stato separato dalla grafica, passo personalizzabile, tastiera, tema scuro e test con il runner di Node.</p>
+              <ul class="chips"><li class="chip">JavaScript</li><li class="chip">DOM</li><li class="chip">16 test</li></ul>
               <div class="project-card__links">
                 <a href="https://viangi23.github.io/progetto-javascript-counter/" target="_blank" rel="noopener">Sito online</a>
                 <a href="https://github.com/viangi23/progetto-javascript-counter" target="_blank" rel="noopener">Codice</a>

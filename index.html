@@ -34,7 +34,10 @@
         <img src="img/favicon.svg" alt="" width="34" height="34">
         Andrea Viani
       </a>
-      <nav aria-label="Menu principale">
+      <!-- Menu mobile solo CSS: la checkbox (nascosta ma raggiungibile da tastiera) apre e chiude i link -->
+      <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-controls="menu-principale">
+      <label class="nav-toggle__btn" for="menu-toggle"><span class="visually-hidden">Apri o chiudi il menu</span><span class="nav-toggle__bars" aria-hidden="true"></span></label>
+      <nav aria-label="Menu principale" id="menu-principale">
         <ul class="nav-links">
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="progetti.html">Progetti</a></li>
@@ -70,7 +73,7 @@
 
     <section class="section section--tint" id="chi-sono" aria-labelledby="chi-sono-titolo">
       <div class="container">
-        <div class="row g-5 align-items-center">
+        <div class="row gx-4 gy-5 align-items-center">
           <div class="col-md-4 col-lg-3 text-center">
             <img src="img/avatar.svg" alt="Avatar con le iniziali di Andrea Viani" width="200" height="200" class="img-fluid rounded-circle about-avatar">
           </div>

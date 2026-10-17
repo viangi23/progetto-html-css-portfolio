@@ -32,7 +32,10 @@
         <img src="img/favicon.svg" alt="" width="34" height="34">
         Andrea Viani
       </a>
-      <nav aria-label="Menu principale">
+      <!-- Menu mobile solo CSS: la checkbox (nascosta ma raggiungibile da tastiera) apre e chiude i link -->
+      <input class="nav-toggle" type="checkbox" id="menu-toggle" aria-controls="menu-principale">
+      <label class="nav-toggle__btn" for="menu-toggle"><span class="visually-hidden">Apri o chiudi il menu</span><span class="nav-toggle__bars" aria-hidden="true"></span></label>
+      <nav aria-label="Menu principale" id="menu-principale">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="progetti.html">Progetti</a></li>

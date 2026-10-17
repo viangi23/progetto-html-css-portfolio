@@ -16,11 +16,15 @@
 }
 
 .btn-outline-brand {
-  --bs-btn-color: #{$brand};
-  --bs-btn-border-color: #{$brand};
-  --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #{$brand};
-  --bs-btn-hover-border-color: #{$brand};
+  // custom properties (non variabili Sass) così il pulsante segue anche il tema scuro
+  --bs-btn-color: var(--brand);
+  --bs-btn-border-color: var(--brand);
+  --bs-btn-hover-color: var(--paper);
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-border-color: var(--brand);
+  --bs-btn-active-color: var(--paper);
+  --bs-btn-active-bg: var(--brand-dark);
+  --bs-btn-active-border-color: var(--brand-dark);
   border-radius: 999px;
   padding: 0.65rem 1.4rem;
   font-weight: 600;
@@ -277,7 +281,7 @@
   .form-control,
   .form-select {
     border-radius: $radius-sm;
-    border-color: #cfd3dd;
+    border-color: var(--field-border);
     padding: 0.7rem 0.9rem;
 
     &:focus {
@@ -287,7 +291,24 @@
   }
 
   .req {
-    color: #b3261e;
+    color: var(--danger);
+  }
+
+  // Validazione solo CSS: :user-invalid scatta dopo che l'utente ha toccato il campo (non al caricamento della pagina)
+  .form-control:user-invalid,
+  .form-check-input:user-invalid {
+    border-color: var(--danger);
+  }
+
+  .field-hint {
+    display: none;
+    margin-top: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--danger);
+  }
+
+  .form-control:user-invalid + .field-hint {
+    display: block;
   }
 }
 
@@ -305,8 +326,21 @@
     display: none !important;
   }
 
+  // in stampa il CV è sempre chiaro, anche se il sistema è in modalità scura
+  :root {
+    --ink: #{$ink};
+    --muted: #{$muted};
+    --paper: #fff;
+    --surface: #fff;
+    --line: #{$line};
+    --brand: #{$brand};
+    --brand-dark: #{$brand-dark};
+    --tint: #{$tint};
+  }
+
   body {
     background: #fff;
+    color: $ink;
   }
 
   .cv {

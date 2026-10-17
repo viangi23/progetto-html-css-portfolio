@@ -9,6 +9,16 @@ $brand-dark: #1f379b;
 $accent: #f2a541;
 $tint: #eef1fd;
 
+// Tema scuro (usato da prefers-color-scheme: dark in _base.scss)
+$ink-dark: #e7eaf3;
+$muted-dark: #a6aec2;
+$paper-dark: #11141d;
+$surface-dark: #1a1f2c;
+$line-dark: #2e3547;
+$brand-on-dark: #8ea6ff; // il blu del brand schiarito: contrasto sufficiente su fondo scuro
+$brand-on-dark-hover: #b5c5ff;
+$tint-dark: #182036;
+
 $radius: 14px;
 $radius-sm: 8px;
 $shadow: 0 10px 30px rgba(27, 34, 54, 0.08);

@@ -3,7 +3,7 @@
 // ---------- Menu sticky ----------
 // Resta fissato in alto durante lo scroll su tutte le dimensioni (sticky-top di Bootstrap + stile proprio).
 .site-nav {
-  background: rgba(251, 249, 244, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--line);
   padding: 0.55rem 0;
@@ -59,17 +59,106 @@
 
     &[aria-current='page'] {
       background: var(--brand);
-      color: #fff;
+      color: var(--paper);
     }
   }
 
   @media (max-width: ($bp-sm - 1px)) {
-    width: 100%;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.5rem 0 0.35rem;
 
     a {
-      padding: 0.4rem 0.55rem;
-      font-size: 0.88rem;
+      padding: 0.65rem 0.9rem;
+      border-radius: $radius-sm;
+    }
+  }
+}
+
+// ---------- Menu mobile (solo CSS, "checkbox hack") ----------
+// Sotto i 576px i link si nascondono dietro un pulsante "hamburger": il pulsante è la <label> della checkbox,
+// e quando la checkbox è spuntata il selettore ~ mostra il menu. Nessuna riga di JavaScript.
+.nav-toggle {
+  // nascosta alla vista ma non a tastiera e screen reader
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.nav-toggle__btn {
+  display: none;
+}
+
+@media (max-width: ($bp-sm - 1px)) {
+  .site-nav nav {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-toggle:checked ~ nav {
+    display: block;
+  }
+
+  .nav-toggle__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; // area di tocco minima consigliata
+    height: 44px;
+    border-radius: $radius-sm;
+    cursor: pointer;
+
+    &:hover {
+      background: var(--tint);
+    }
+  }
+
+  .nav-toggle:focus-visible + .nav-toggle__btn {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  // Tre linee disegnate con un elemento e i suoi pseudo-elementi; da aperto diventano una X
+  .nav-toggle__bars,
+  .nav-toggle__bars::before,
+  .nav-toggle__bars::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 2px;
+    background: var(--ink);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .nav-toggle__bars {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+
+  .nav-toggle:checked + .nav-toggle__btn .nav-toggle__bars {
+    background: transparent;
+
+    &::before {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-7px) rotate(-45deg);
     }
   }
 }
@@ -143,5 +232,45 @@
 
   p {
     max-width: 62ch;
+  }
+}
+
+// ---------- Animazione d'ingresso della home ----------
+// Il testo e l'illustrazione salgono e compaiono al caricamento; chi ha scelto di ridurre le animazioni non le vede.
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero__grid > * {
+    animation: rise-in 0.6s ease-out both;
+  }
+
+  .hero__art {
+    animation-delay: 0.15s;
+  }
+}
+
+// ---------- Pagina 404 ----------
+.not-found {
+  padding: 5rem 0 6rem;
+  text-align: center;
+
+  &__code {
+    font-size: clamp(4.5rem, 18vw, 8rem);
+    font-weight: 800;
+    line-height: 1;
+    background: linear-gradient(90deg, var(--brand), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 }

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><title>Progetto HTML e CSS di Andrea Viani</title>
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  :root { --ink:#1b2236; --muted:#5b6477; --brand:#2d4fd6; --brand-d:#1f379b; --accent:#f2a541; --tint:#eef1fd; --line:#e2e5ee; }
+  * { box-sizing:border-box; } html,body{margin:0;padding:0;}
+  body { font-family:"Segoe UI",Arial,sans-serif; color:var(--ink); }
+  .slide { width:297mm; height:210mm; padding:15mm 18mm 13mm; page-break-after:always; position:relative; overflow:hidden; background:#fff; }
+  .slide:last-child { page-break-after:auto; }
+  h1{font-size:38pt;margin:0 0 4mm;letter-spacing:-.5px;} h2{font-size:21pt;margin:0 0 5mm;color:var(--brand);}
+  p,li{font-size:11.6pt;line-height:1.42;margin:0 0 2mm;} ul{margin:0;padding-left:6mm;}
+  a{color:var(--brand-d);font-weight:600;word-break:break-all;}
+  code{font-family:Consolas,"Courier New",monospace;font-size:10pt;background:#eef1f8;padding:0 1.4mm;border-radius:4px;}
+  .foot{position:absolute;bottom:6mm;left:18mm;right:18mm;display:flex;justify-content:space-between;font-size:9pt;color:var(--muted);border-top:1px solid var(--line);padding-top:2mm;}
+  .cover{background:linear-gradient(135deg,#141b3c 0%,#2d4fd6 62%,#f2a541 140%);color:#fff;display:flex;flex-direction:column;justify-content:center;}
+  .cover h1{color:#fff;font-size:44pt;} .cover p{color:#dfe5ff;font-size:15pt;}
+  .tag{display:inline-block;background:rgba(255,255,255,.16);padding:2mm 5mm;border-radius:20px;font-size:11pt;margin-bottom:8mm;width:max-content;}
+  .linkbox{margin-top:9mm;background:rgba(255,255,255,.14);border-radius:10px;padding:5mm 7mm;}
+  .linkbox p{font-size:13pt;color:#fff;margin:0 0 2mm;} .linkbox a{color:#ffe1ad;}
+  .cols{display:flex;gap:8mm;} .col{flex:1;min-width:0;}
+  .card{border:1px solid var(--line);border-radius:8px;padding:4mm 5mm;background:#fafbfe;margin-bottom:3.5mm;}
+  .card.hot{background:var(--tint);border-color:#cfd7f7;} .lab{font-weight:700;color:var(--brand);margin-bottom:1.5mm;}
+  table{border-collapse:collapse;width:100%;font-size:10.2pt;} th,td{border:1px solid var(--line);padding:1.6mm 2.6mm;text-align:left;vertical-align:top;} th{background:#eef1f8;}
+  pre{font-family:Consolas,"Courier New",monospace;font-size:9.2pt;line-height:1.36;background:#f4f6fb;border:1px solid var(--line);border-radius:8px;padding:3.5mm 4.5mm;margin:0 0 3mm;white-space:pre-wrap;}
+  img.shot{max-width:100%;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 20px rgba(27,34,54,.14);display:block;margin:0 auto;object-fit:cover;object-position:top;}
+  .cap{font-size:9.5pt;color:var(--muted);text-align:center;margin-top:1.5mm;}
+  .new{display:inline-block;background:#fff1d6;color:#8a5a00;font-size:8.5pt;font-weight:700;padding:.3mm 2mm;border-radius:10px;vertical-align:middle;margin-left:1mm;}
+</style></head><body>
+
+<section class="slide cover">
+  <div class="tag">Progetto HTML e CSS · Master start2impact / Unimarconi</div>
+  <h1>Il mio sito personale<br>Andrea Viani</h1>
+  <p>Portfolio in HTML e CSS con Sass e Bootstrap: home, progetti, CV e modulo di contatto</p>
+  <p style="margin-top:6mm;font-size:13pt">Andrea Viani</p>
+  <div class="linkbox">
+    <p>🔗 <b>Repository GitHub:</b> <a href="https://github.com/viangi23/progetto-html-css-portfolio">https://github.com/viangi23/progetto-html-css-portfolio</a></p>
+    <p style="margin:0">🌐 <b>Sito online:</b> <a href="https://viangi23.github.io/progetto-html-css-portfolio/">https://viangi23.github.io/progetto-html-css-portfolio/</a></p>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>Obiettivo e scelte di contenuto</h2>
+  <div class="cols">
+    <div class="col" style="flex:.85">
+      <div class="card hot">
+        <div class="lab">A chi parla</div>
+        <p>A chi recluta o cerca uno sviluppatore web: in pochi secondi deve capire chi sono, cosa so fare e come contattarmi. Il pulsante «Scrivimi» e il menu sono sempre a portata di mano.</p>
+      </div>
+      <div class="card">
+        <div class="lab">Cosa mostro</div>
+        <ul>
+          <li>Competenze raggruppate in front end, back end/DevOps e dati.</li>
+          <li>Progetti reali del Master, con tecnologie, numero di test e link al codice.</li>
+          <li>CV in HTML, stampabile in PDF.</li>
+          <li>Contatti con un modulo: niente email in chiaro, per non finire negli elenchi dei bot di spam.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <table>
+        <tr><th>Requisito</th><th>Soluzione</th></tr>
+        <tr><td>Solo HTML e CSS</td><td>nessun JavaScript, nemmeno quello di Bootstrap</td></tr>
+        <tr><td>CV in HTML + pagina contatti con form</td><td><code>cv.html</code>, <code>contattami.html</code></td></tr>
+        <tr><td>Framework front end</td><td>Bootstrap 5 (griglia, form, utility)</td></tr>
+        <tr><td>Favicon</td><td><code>favicon.svg</code></td></tr>
+        <tr><td>Menu sticky</td><td><code>sticky-top</code> su ogni schermo; su mobile menu «hamburger» <b>solo CSS</b> <span class="new">NUOVO</span></td></tr>
+        <tr><td>Flexbox / Grid</td><td>Grid per le sezioni, Flexbox per menu, footer e card</td></tr>
+        <tr><td>Sass</td><td><code>scss/</code> → <code>css/style.css</code></td></tr>
+        <tr><td>100% responsive</td><td>mobile-first, nessuno scroll orizzontale a 320, 375, 550, 800 e 1280 px</td></tr>
+        <tr><td>Open Graph, form con <code>required</code></td><td>in ogni pagina; validazione del browser attiva</td></tr>
+        <tr><td>GitHub Pages</td><td>pubblicazione dal ramo <code>main</code></td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>2</span></div>
+</section>
+
+<section class="slide">
+  <h2>Home e design</h2>
+  <div class="cols">
+    <div class="col" style="flex:1.55"><img class="shot" src="home.png" alt="Home del sito" style="height:132mm;width:100%"><div class="cap">Home: presentazione, chi sono, competenze e progetti in evidenza</div></div>
+    <div class="col">
+      <div class="card hot">
+        <div class="lab">Scelte di design</div>
+        <ul>
+          <li><b>Palette</b>: blu intenso per le azioni, ambra come accento, fondo caldo per non stancare la vista.</li>
+          <li><b>Tipografia</b>: caratteri di sistema (nessun font esterno = pagina veloce) e titoli fluidi con <code>clamp()</code>.</li>
+          <li><b>Gerarchia</b>: un solo titolo grande per pagina, sezioni alternate chiare/tinta per guidare la lettura.</li>
+          <li>Illustrazioni <b>SVG</b> leggere al posto delle foto.</li>
+          <li>Testo e illustrazione della home <b>entrano con un'animazione</b> CSS, disattivata per chi riduce le animazioni. <span class="new">NUOVO</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>3</span></div>
+</section>
+
+<section class="slide">
+  <h2>Progetti e CV</h2>
+  <div class="cols">
+    <div class="col"><img class="shot" src="progetti.png" alt="Pagina progetti" style="height:128mm;width:100%"><div class="cap">Progetti: card con tecnologie e link</div></div>
+    <div class="col"><img class="shot" src="cv.png" alt="Pagina CV" style="height:128mm;width:100%"><div class="cap">CV: barra laterale + linea del tempo, con stile di stampa</div></div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>4</span></div>
+</section>
+
+<section class="slide">
+  <h2>Contatti e responsive</h2>
+  <div class="cols">
+    <div class="col" style="flex:1.35"><img class="shot" src="contatti.png" alt="Modulo di contatto" style="height:96mm;width:100%"><div class="cap">Modulo di contatto</div></div>
+    <div class="col" style="flex:.55"><img class="shot" src="home-mobile.png" alt="Versione mobile con menu hamburger" style="width:100%;height:auto;max-height:132mm;object-fit:contain"><div class="cap">Mobile: menu «hamburger»</div></div>
+    <div class="col">
+      <div class="card hot">
+        <div class="lab">Il modulo</div>
+        <ul>
+          <li>campi <code>required</code>, <code>type="email"</code>, <code>minlength</code>, etichette collegate</li>
+          <li><b>validazione solo CSS</b>: dopo aver toccato un campo errato compare il bordo rosso e un aiuto (<code>:user-invalid</code>) <span class="new">NUOVO</span></li>
+          <li>campo trappola per i bot; invio via FormSubmit, senza JavaScript e senza mostrare la mia email</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="lab">Responsive</div>
+        <ul>
+          <li>mobile-first: una colonna → griglia da 900/992 px</li>
+          <li>sotto i 576 px il menu si apre e chiude con un pulsante, sempre sticky</li>
+          <li>nessuno scroll orizzontale da 320 a 1280 px</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>5</span></div>
+</section>
+
+<section class="slide">
+  <h2>Il tocco in più: tema scuro, menu solo CSS e pagina 404</h2>
+  <div class="cols">
+    <div class="col" style="flex:1.2">
+      <img class="shot" src="home-dark.png" alt="Home in tema scuro" style="height:72mm;width:100%"><div class="cap">Tema scuro automatico (segue il sistema operativo)</div>
+      <img class="shot" src="notfound.png" alt="Pagina 404" style="height:40mm;width:100%;margin-top:3mm"><div class="cap">Pagina 404, mostrata da GitHub Pages per gli indirizzi inesistenti</div>
+    </div>
+    <div class="col">
+      <div class="lab">Menu mobile senza JavaScript</div>
+<pre>&lt;input class="nav-toggle" type="checkbox" id="menu-toggle"&gt;
+&lt;label class="nav-toggle__btn" for="menu-toggle"&gt;…&lt;/label&gt;
+&lt;nav id="menu-principale"&gt;…&lt;/nav&gt;
+
+@media (max-width: ($bp-sm - 1px)) {
+  .site-nav nav { display: none; }
+  .nav-toggle:checked ~ nav { display: block; }
+}</pre>
+      <p>La casella è invisibile ma resta raggiungibile da tastiera; le tre linee del pulsante diventano una X quando il menu è aperto.</p>
+      <div class="lab" style="margin-top:3mm">Tema scuro con le custom properties</div>
+<pre>@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #{$ink-dark};
+    --paper: #{$paper-dark};
+    --brand: #{$brand-on-dark}; // blu schiarito
+    --bs-link-color-rgb: 142, 166, 255;
+  }
+}</pre>
+      <p>Tutti i componenti usano già le variabili, quindi basta ridefinirle. In stampa il CV torna sempre chiaro.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>6</span></div>
+</section>
+
+<section class="slide">
+  <h2>Tecnica: Sass, Bootstrap, accessibilità</h2>
+  <div class="cols">
+    <div class="col">
+<pre>scss/
+  _variables.scss   colori (chiari e scuri), misure,
+                    breakpoint, mixin
+  _base.scss        custom properties, tema scuro,
+                    tipografia, focus
+  _layout.scss      menu sticky e hamburger, hero (Grid),
+                    animazioni, footer, 404
+  _components.scss  card, skill, timeline, CV, form
+  main.scss         @use di tutti i partial
+
+npm run sass  →  css/style.css</pre>
+      <div class="card hot">
+        <div class="lab">Perché Sass</div>
+        <p>Variabili e mixin tengono il tema in un solo posto (<code>@include up($bp-md)</code>); annidamento e partial rendono i file piccoli e leggibili. Le variabili diventano custom properties CSS e ridefiniscono i colori di Bootstrap.</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="lab">Bootstrap, solo CSS</div>
+        <p>Uso griglia, form, utility e <code>sticky-top</code>; il file è in <code>css/vendor/</code>, quindi nessun CDN. Il mio Sass sovrascrive colori, link e pulsanti.</p>
+      </div>
+      <div class="card">
+        <div class="lab">Accessibilità e qualità</div>
+        <ul>
+          <li>HTML semantico (<code>header</code>, <code>nav</code>, <code>main</code>, <code>section</code>, <code>aside</code>)</li>
+          <li>«Vai al contenuto», <code>aria-current</code>, focus visibile, <code>alt</code> ovunque, aiuti dei campi collegati con <code>aria-describedby</code></li>
+          <li><code>prefers-reduced-motion</code> e <code>prefers-color-scheme</code> rispettati</li>
+          <li>Tag Open Graph e immagine 1200×630 per le anteprime social</li>
+          <li><code>html-validate</code> e controllo automatico di link e ancore: 0 problemi</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>7</span></div>
+</section>
+
+<section class="slide">
+  <h2>Link</h2>
+  <div class="card hot">
+    <div class="lab">Consegna</div>
+    <p>Repository GitHub: <a href="https://github.com/viangi23/progetto-html-css-portfolio">https://github.com/viangi23/progetto-html-css-portfolio</a></p>
+    <p style="margin:0">Sito online (GitHub Pages): <a href="https://viangi23.github.io/progetto-html-css-portfolio/">https://viangi23.github.io/progetto-html-css-portfolio/</a></p>
+  </div>
+  <div class="cols">
+    <div class="col">
+      <div class="card">
+        <div class="lab">Cosa ho imparato</div>
+        <ul>
+          <li>Struttura semantica e layout con Flexbox e Grid</li>
+          <li>Organizzare il CSS con Sass e le custom properties</li>
+          <li>Progettare mobile-first e verificare davvero a schermo stretto</li>
+          <li>Quanto si può fare con il solo CSS: menu, tema scuro, validazione</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <div class="lab">Prossimi passi</div>
+        <ul>
+          <li>Aggiungere foto, esperienze e profili social</li>
+          <li>Inserire i progetti futuri nel portfolio</li>
+          <li>Un interruttore manuale chiaro/scuro (servirà un po' di JavaScript)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>8</span></div>
+</section>
+
+</body></html>

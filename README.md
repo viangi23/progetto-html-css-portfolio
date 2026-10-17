@@ -14,6 +14,7 @@ Portfolio realizzato **solo con HTML e CSS** (Sass + Bootstrap) per il corso *HT
 | `cv.html` | **CV in HTML**, con stile dedicato alla stampa (si salva in PDF dal browser) |
 | `contattami.html` | **Form di contatto** con validazione HTML (`required`, `type="email"`, `minlength`) |
 | `grazie.html` | Pagina mostrata dopo l'invio del modulo |
+| `404.html` | Pagina «non trovata», mostrata automaticamente da GitHub Pages |
 
 ## Requisiti del brief → dove sono soddisfatti
 
@@ -24,20 +25,20 @@ Portfolio realizzato **solo con HTML e CSS** (Sass + Bootstrap) per il corso *HT
 | Pagina "contattami" con form | `contattami.html`, attributi `required`, etichette collegate, campo anti-bot |
 | Framework front end | **Bootstrap 5** (griglia, utility, form, pulsanti) in `css/vendor/` |
 | Favicon | `img/favicon.svg` |
-| Menu sticky (almeno mobile) | `sticky-top` su tutte le dimensioni; su mobile il menu va a capo e resta sempre visibile |
+| Menu sticky (almeno mobile) | `sticky-top` su tutte le dimensioni; sotto i 576 px diventa un menu «hamburger» **solo CSS** (checkbox + `<label>`, selettore `~`), raggiungibile da tastiera |
 | Layout con Flexbox o Grid | **Grid**: hero, skill, CV, contatti. **Flexbox**: menu, footer, card |
 | Sass | `scss/` (variabili, base, layout, componenti) → compilato in `css/style.css` |
-| 100% responsive | mobile-first, verificato a 375 px senza scroll orizzontale |
+| 100% responsive | mobile-first, verificato a 320, 375, 550, 800 e 1280 px senza scroll orizzontale |
 | GitHub Pages | vedi sotto |
 | Tag Open Graph | in ogni pagina: titolo, descrizione, URL, immagine 1200×630 (`img/og-image.png`) |
 | Collegare il form a un servizio email (opzionale) | FormSubmit, senza JavaScript e senza mostrare l'email (vedi sotto) |
 
-Extra: link «Vai al contenuto», `aria-current` sulla pagina attiva, focus visibile, `prefers-reduced-motion`, alt su tutte le immagini, stile di stampa per il CV.
+Extra: **tema scuro automatico** (`prefers-color-scheme`, tutto tramite custom properties), **validazione del modulo solo CSS** con messaggi che compaiono dopo aver toccato un campo (`:user-invalid`), animazione d'ingresso della home, **pagina 404**, link «Vai al contenuto», `aria-current` sulla pagina attiva, focus visibile, `prefers-reduced-motion`, alt su tutte le immagini, stile di stampa per il CV (sempre chiaro, anche col tema scuro).
 
 ## Struttura
 
 ```
-index.html · progetti.html · cv.html · contattami.html · grazie.html
+index.html · progetti.html · cv.html · contattami.html · grazie.html · 404.html
 css/style.css          generato da Sass
 css/vendor/            Bootstrap (solo CSS)
 scss/                  _variables, _base, _layout, _components, main

@@ -16,6 +16,46 @@
   --bs-body-bg: #{$paper};
   --bs-link-color: #{$brand};
   --bs-link-hover-color: #{$brand-dark};
+  // Bootstrap 5.3 colora i link con la versione RGB della variabile: senza queste due righe resterebbero blu Bootstrap
+  --bs-link-color-rgb: 45, 79, 214; // = $brand
+  --bs-link-hover-color-rgb: 31, 55, 155; // = $brand-dark
+  --nav-bg: #{rgba($paper, 0.92)};
+  --field-border: #cfd3dd;
+  --danger: #b3261e;
+  color-scheme: light dark; // i controlli nativi (form, scrollbar) seguono il tema
+}
+
+// Tema scuro automatico: si attiva se il sistema operativo dell'utente è in modalità scura.
+// Basta ridefinire le custom properties: tutti i componenti le usano già.
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #{$ink-dark};
+    --muted: #{$muted-dark};
+    --paper: #{$paper-dark};
+    --surface: #{$surface-dark};
+    --line: #{$line-dark};
+    --brand: #{$brand-on-dark};
+    --brand-dark: #{$brand-on-dark-hover};
+    --tint: #{$tint-dark};
+    --nav-bg: #{rgba($paper-dark, 0.9)};
+    --field-border: #{$line-dark};
+    --danger: #ff8a80;
+    --bs-body-color: #{$ink-dark};
+    --bs-body-bg: #{$paper-dark};
+    --bs-secondary-bg: #{$surface-dark};
+    --bs-border-color: #{$line-dark};
+    --bs-link-color: #{$brand-on-dark};
+    --bs-link-hover-color: #{$brand-on-dark-hover};
+    --bs-link-color-rgb: 142, 166, 255; // = $brand-on-dark
+    --bs-link-hover-color-rgb: 181, 197, 255; // = $brand-on-dark-hover
+  }
+
+  // le illustrazioni SVG hanno fondo chiaro: un filo di luminosità in meno le integra meglio
+  .hero__art img,
+  .about-avatar,
+  .cv__avatar {
+    filter: brightness(0.92);
+  }
 }
 
 html {
