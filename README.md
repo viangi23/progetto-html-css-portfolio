@@ -66,13 +66,17 @@ npm run check      # link, risorse locali, ancore e alt
 3. Dopo un minuto il sito è su `https://<tuo-username>.github.io/progetto-html-css-portfolio/`.
 4. Se lo username non è `viangi23`, sostituiscilo nei link (`og:url`, `og:image`, `canonical`) con una ricerca e sostituzione globale.
 
-## Attivare il modulo di contatto (FormSubmit)
+## Modulo di contatto (FormSubmit)
 
-Il modulo invia i dati a `https://formsubmit.co/CODICE-FORMSUBMIT`.
+Il modulo è **attivo**: invia i dati a FormSubmit, che li inoltra per email. Nell'attributo `action` di `contattami.html` c'è il **codice casuale** fornito da FormSubmit al posto dell'indirizzo email, così l'email non compare nel codice pubblico e i bot non possono raccoglierla.
 
-1. Sostituisci `CODICE-FORMSUBMIT` in `contattami.html` con la tua email **solo la prima volta**, apri il sito online e invia un messaggio di prova.
-2. FormSubmit ti manda un'email di attivazione con un **codice alfanumerico casuale**.
-3. Sostituisci di nuovo il valore in `action` con quel codice: da quel momento l'email non compare più nel codice pubblico e i bot non possono raccoglierla.
+Come si attiva (per riprodurlo con un'altra email):
+
+1. si mette per una volta la propria email nell'`action` e si invia un messaggio di prova;
+2. FormSubmit manda un'email di attivazione con un **codice alfanumerico casuale**;
+3. si clicca «Activate Form» e si sostituisce l'email con quel codice.
+
+Dopo l'invio l'utente torna sulla pagina `grazie.html` (campo nascosto `_next`).
 
 In alternativa si può usare EmailJS (richiede JavaScript, fuori dal vincolo «solo HTML e CSS»).
 

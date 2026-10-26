@@ -67,10 +67,10 @@
           </aside>
 
           <!--
-            Il modulo usa un servizio esterno di invio email (FormSubmit): sostituisci CODICE-FORMSUBMIT con il codice
-            che ricevi attivando il servizio con la tua email (vedi README). L'indirizzo email non compare mai nella pagina.
+            Il modulo usa un servizio esterno di invio email (FormSubmit). Nell'action c'è il codice casuale fornito
+            da FormSubmit al posto dell'indirizzo email, che così non compare mai nella pagina (vedi README).
           -->
-          <form class="contact__form" action="https://formsubmit.co/CODICE-FORMSUBMIT" method="post">
+          <form class="contact__form" action="https://formsubmit.co/6e1a0ab61d2fe6067f281d8be7d6d23c" method="post">
             <div class="mb-3">
               <label class="form-label" for="nome">Nome <span class="req" aria-hidden="true">*</span></label>
               <input class="form-control" type="text" id="nome" name="nome" autocomplete="name" required minlength="2" maxlength="80" aria-describedby="nome-hint">
