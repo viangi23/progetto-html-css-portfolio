@@ -356,3 +356,15 @@
 .about-avatar {
   max-width: 200px;
 }
+
+// Servizi in home: stesse box delle competenze, 4 colonne su schermi larghi
+.skill-grid--4 {
+  @include up($bp-lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skill-box p {
+  color: var(--muted);
+  margin: 0;
+}

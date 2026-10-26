@@ -679,3 +679,14 @@ a {
 .about-avatar {
   max-width: 200px;
 }
+
+@media (min-width: 992px) {
+  .skill-grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.skill-box p {
+  color: var(--muted);
+  margin: 0;
+}
