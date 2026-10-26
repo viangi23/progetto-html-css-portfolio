@@ -9,8 +9,8 @@ Portfolio realizzato **solo con HTML e CSS** (Sass + Bootstrap) per il corso *HT
 
 | Pagina | Contenuto |
 |---|---|
-| `index.html` | Home: presentazione, chi sono, competenze, progetti in evidenza |
-| `progetti.html` | Elenco dei progetti con tecnologie e link a sito e codice |
+| `index.html` | Home: presentazione, chi sono, servizi, lavori in evidenza |
+| `progetti.html` (Lavori) | Lavori per i clienti e progetti del Master |
 | `cv.html` | **CV in HTML**, con stile dedicato alla stampa (si salva in PDF dal browser) |
 | `contattami.html` | **Form di contatto** con validazione HTML (`required`, `type="email"`, `minlength`) |
 | `grazie.html` | Pagina mostrata dopo l'invio del modulo |
@@ -80,11 +80,11 @@ Dopo l'invio l'utente torna sulla pagina `grazie.html` (campo nascosto `_next`).
 
 In alternativa si può usare EmailJS (richiede JavaScript, fuori dal vincolo «solo HTML e CSS»).
 
-## Cose da personalizzare
+## Contenuti
 
-I contenuti sono scritti solo con ciò che emerge dal percorso del Master. Prima di consegnare rivedi:
+Il sito presenta l'attività reale di Andrea: **siti web e AI per le imprese**, a Lucca, in Versilia e in tutta Italia da remoto.
 
-- il testo «Cerco un ruolo da sviluppatore web junior» (home, CV, contatti) e le percentuali delle barre delle competenze (sono un'autovalutazione);
-- aggiungi **formazione ed esperienze precedenti** nel CV (`cv.html`, sezione *Formazione*) e i link ai tuoi profili social;
-- se vuoi una **foto**, salva `img/foto.jpg` e sostituisci `img/avatar.svg` in home e CV (mantieni `alt`);
-- verifica username GitHub e link dei progetti (i repository vanno creati/pubblicati).
+- **Home**: posizionamento, chi sono, quattro servizi (siti ed e-commerce, visibilità online, ottimizzazione con l'AI, contenuti social con l'AI), lavori in evidenza.
+- **Lavori** (`progetti.html`): lavori per i clienti, descritti senza nome per riservatezza, e progetti del Master. I link a codice e demo dei progetti del Master verranno aggiunti quando i rispettivi repository saranno pubblicati.
+- **CV**: esperienze, formazione, competenze e lingue; nessuna foto, per scelta.
+- La presentazione PDF della consegna si genera da `presentazione-sorgente/presentazione.html` (Chrome → Stampa in PDF, A4 orizzontale).

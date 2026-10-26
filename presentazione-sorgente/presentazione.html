@@ -30,7 +30,7 @@
 <section class="slide cover">
   <div class="tag">Progetto HTML e CSS · Master start2impact / Unimarconi</div>
   <h1>Il mio sito personale<br>Andrea Viani</h1>
-  <p>Portfolio in HTML e CSS con Sass e Bootstrap: home, progetti, CV e modulo di contatto</p>
+  <p>Siti web e AI per le imprese: il sito della mia attività in HTML e CSS, con Sass e Bootstrap</p>
   <p style="margin-top:6mm;font-size:13pt">Andrea Viani</p>
   <div class="linkbox">
     <p>🔗 <b>Repository GitHub:</b> <a href="https://github.com/viangi23/progetto-html-css-portfolio">https://github.com/viangi23/progetto-html-css-portfolio</a></p>
@@ -44,14 +44,14 @@
     <div class="col" style="flex:.85">
       <div class="card hot">
         <div class="lab">A chi parla</div>
-        <p>A chi recluta o cerca uno sviluppatore web: in pochi secondi deve capire chi sono, cosa so fare e come contattarmi. Il pulsante «Scrivimi» e il menu sono sempre a portata di mano.</p>
+        <p>A imprese e attività locali (Lucca, Versilia e tutta Italia da remoto) che cercano un sito o vogliono lavorare meglio con l'AI, e ad agenzie e aziende che cercano un collaboratore. In pochi secondi devono capire chi sono, cosa faccio e come contattarmi: il pulsante «Raccontami il tuo progetto» e il menu sono sempre a portata di mano.</p>
       </div>
       <div class="card">
         <div class="lab">Cosa mostro</div>
         <ul>
-          <li>Competenze raggruppate in front end, back end/DevOps e dati.</li>
-          <li>Progetti reali del Master, con tecnologie, numero di test e link al codice.</li>
-          <li>CV in HTML, stampabile in PDF.</li>
+          <li>Quattro servizi chiari: siti ed e-commerce, visibilità online (SEO e GEO), ottimizzazione con l'AI, contenuti social con l'AI.</li>
+          <li>Lavori reali per i clienti, descritti senza nome per riservatezza, e i progetti del Master.</li>
+          <li>CV in HTML con esperienze e formazione reali, stampabile in PDF.</li>
           <li>Contatti con un modulo: niente email in chiaro, per non finire negli elenchi dei bot di spam.</li>
         </ul>
       </div>
@@ -63,7 +63,7 @@
         <tr><td>CV in HTML + pagina contatti con form</td><td><code>cv.html</code>, <code>contattami.html</code></td></tr>
         <tr><td>Framework front end</td><td>Bootstrap 5 (griglia, form, utility)</td></tr>
         <tr><td>Favicon</td><td><code>favicon.svg</code></td></tr>
-        <tr><td>Menu sticky</td><td><code>sticky-top</code> su ogni schermo; su mobile menu «hamburger» <b>solo CSS</b> <span class="new">NUOVO</span></td></tr>
+        <tr><td>Menu sticky</td><td><code>sticky-top</code> su ogni schermo; su mobile menu «hamburger» <b>solo CSS</b></td></tr>
         <tr><td>Flexbox / Grid</td><td>Grid per le sezioni, Flexbox per menu, footer e card</td></tr>
         <tr><td>Sass</td><td><code>scss/</code> → <code>css/style.css</code></td></tr>
         <tr><td>100% responsive</td><td>mobile-first, nessuno scroll orizzontale a 320, 375, 550, 800 e 1280 px</td></tr>
@@ -78,7 +78,7 @@
 <section class="slide">
   <h2>Home e design</h2>
   <div class="cols">
-    <div class="col" style="flex:1.55"><img class="shot" src="home.png" alt="Home del sito" style="height:132mm;width:100%"><div class="cap">Home: presentazione, chi sono, competenze e progetti in evidenza</div></div>
+    <div class="col" style="flex:1.55"><img class="shot" src="home.png" alt="Home del sito" style="height:132mm;width:100%"><div class="cap">Home: presentazione, chi sono, servizi e lavori in evidenza</div></div>
     <div class="col">
       <div class="card hot">
         <div class="lab">Scelte di design</div>
@@ -87,7 +87,8 @@
           <li><b>Tipografia</b>: caratteri di sistema (nessun font esterno = pagina veloce) e titoli fluidi con <code>clamp()</code>.</li>
           <li><b>Gerarchia</b>: un solo titolo grande per pagina, sezioni alternate chiare/tinta per guidare la lettura.</li>
           <li>Illustrazioni <b>SVG</b> leggere al posto delle foto.</li>
-          <li>Testo e illustrazione della home <b>entrano con un'animazione</b> CSS, disattivata per chi riduce le animazioni. <span class="new">NUOVO</span></li>
+          <li><b>Testi</b> rivolti al cliente: cosa ottiene (più clienti, meno tempo perso), non solo quali tecnologie uso.</li>
+          <li>Testo e illustrazione della home <b>entrano con un'animazione</b> CSS, disattivata per chi riduce le animazioni.</li>
         </ul>
       </div>
     </div>
@@ -96,9 +97,9 @@
 </section>
 
 <section class="slide">
-  <h2>Progetti e CV</h2>
+  <h2>Lavori e CV</h2>
   <div class="cols">
-    <div class="col"><img class="shot" src="progetti.png" alt="Pagina progetti" style="height:128mm;width:100%"><div class="cap">Progetti: card con tecnologie e link</div></div>
+    <div class="col"><img class="shot" src="progetti.png" alt="Pagina progetti" style="height:128mm;width:100%"><div class="cap">Lavori: clienti e progetti del Master in card con Flexbox</div></div>
     <div class="col"><img class="shot" src="cv.png" alt="Pagina CV" style="height:128mm;width:100%"><div class="cap">CV: barra laterale + linea del tempo, con stile di stampa</div></div>
   </div>
   <div class="foot"><span>Progetto HTML e CSS – Andrea Viani</span><span>4</span></div>
@@ -114,8 +115,8 @@
         <div class="lab">Il modulo</div>
         <ul>
           <li>campi <code>required</code>, <code>type="email"</code>, <code>minlength</code>, etichette collegate</li>
-          <li><b>validazione solo CSS</b>: dopo aver toccato un campo errato compare il bordo rosso e un aiuto (<code>:user-invalid</code>) <span class="new">NUOVO</span></li>
-          <li>campo trappola per i bot; invio via FormSubmit, senza JavaScript e senza mostrare la mia email</li>
+          <li><b>validazione solo CSS</b>: dopo aver toccato un campo errato compare il bordo rosso e un aiuto (<code>:user-invalid</code>)</li>
+          <li>campo trappola per i bot; invio <b>attivo</b> via FormSubmit, senza JavaScript: nell'<code>action</code> c'è un codice al posto della mia email</li>
         </ul>
       </div>
       <div class="card">
@@ -227,8 +228,9 @@ npm run sass  →  css/style.css</pre>
       <div class="card">
         <div class="lab">Prossimi passi</div>
         <ul>
-          <li>Aggiungere foto, esperienze e profili social</li>
-          <li>Inserire i progetti futuri nel portfolio</li>
+          <li>Pubblicare su GitHub gli altri progetti del Master e collegarli</li>
+          <li>Aggiungere i nuovi lavori per i clienti, con il loro permesso</li>
+          <li>Profili social professionali</li>
           <li>Un interruttore manuale chiaro/scuro (servirà un po' di JavaScript)</li>
         </ul>
       </div>
